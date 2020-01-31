@@ -24,19 +24,21 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.button14 = New System.Windows.Forms.Button()
-        Me.button2 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
-        Me.button5 = New System.Windows.Forms.Button()
-        Me.button4 = New System.Windows.Forms.Button()
         Me.panel2 = New System.Windows.Forms.Panel()
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.SidePanel = New System.Windows.Forms.Panel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.button7 = New System.Windows.Forms.Button()
         Me.button6 = New System.Windows.Forms.Button()
+        Me.button5 = New System.Windows.Forms.Button()
+        Me.button4 = New System.Windows.Forms.Button()
         Me.button3 = New System.Windows.Forms.Button()
+        Me.button2 = New System.Windows.Forms.Button()
+        Me.button1 = New System.Windows.Forms.Button()
         Me.button13 = New System.Windows.Forms.Button()
         Me.button12 = New System.Windows.Forms.Button()
         Me.button11 = New System.Windows.Forms.Button()
+        Me.AddBook1 = New E_Book_Store___User.AddBook()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,70 +56,6 @@ Partial Class Form1
         Me.button14.Text = "?"
         Me.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button14.UseVisualStyleBackColor = True
-        '
-        'button2
-        '
-        Me.button2.FlatAppearance.BorderSize = 0
-        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button2.ForeColor = System.Drawing.Color.White
-        Me.button2.Image = CType(resources.GetObject("button2.Image"), System.Drawing.Image)
-        Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button2.Location = New System.Drawing.Point(12, 113)
-        Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(197, 54)
-        Me.button2.TabIndex = 4
-        Me.button2.Text = "       My Books"
-        Me.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.button2.UseVisualStyleBackColor = True
-        '
-        'button1
-        '
-        Me.button1.FlatAppearance.BorderSize = 0
-        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button1.ForeColor = System.Drawing.Color.White
-        Me.button1.Image = CType(resources.GetObject("button1.Image"), System.Drawing.Image)
-        Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button1.Location = New System.Drawing.Point(12, 59)
-        Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(197, 54)
-        Me.button1.TabIndex = 4
-        Me.button1.Text = "       Add Book"
-        Me.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.button1.UseVisualStyleBackColor = True
-        '
-        'button5
-        '
-        Me.button5.FlatAppearance.BorderSize = 0
-        Me.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button5.ForeColor = System.Drawing.Color.White
-        Me.button5.Image = CType(resources.GetObject("button5.Image"), System.Drawing.Image)
-        Me.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button5.Location = New System.Drawing.Point(12, 275)
-        Me.button5.Name = "button5"
-        Me.button5.Size = New System.Drawing.Size(197, 54)
-        Me.button5.TabIndex = 4
-        Me.button5.Text = "       Downloads"
-        Me.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.button5.UseVisualStyleBackColor = True
-        '
-        'button4
-        '
-        Me.button4.FlatAppearance.BorderSize = 0
-        Me.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button4.ForeColor = System.Drawing.Color.White
-        Me.button4.Image = CType(resources.GetObject("button4.Image"), System.Drawing.Image)
-        Me.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button4.Location = New System.Drawing.Point(12, 221)
-        Me.button4.Name = "button4"
-        Me.button4.Size = New System.Drawing.Size(197, 54)
-        Me.button4.TabIndex = 4
-        Me.button4.Text = "       Request Payment"
-        Me.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.button4.UseVisualStyleBackColor = True
         '
         'panel2
         '
@@ -154,6 +92,10 @@ Partial Class Form1
         Me.SidePanel.Size = New System.Drawing.Size(10, 54)
         Me.SidePanel.TabIndex = 4
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'button7
         '
         Me.button7.FlatAppearance.BorderSize = 0
@@ -186,6 +128,38 @@ Partial Class Form1
         Me.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button6.UseVisualStyleBackColor = True
         '
+        'button5
+        '
+        Me.button5.FlatAppearance.BorderSize = 0
+        Me.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button5.ForeColor = System.Drawing.Color.White
+        Me.button5.Image = CType(resources.GetObject("button5.Image"), System.Drawing.Image)
+        Me.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button5.Location = New System.Drawing.Point(12, 275)
+        Me.button5.Name = "button5"
+        Me.button5.Size = New System.Drawing.Size(197, 54)
+        Me.button5.TabIndex = 4
+        Me.button5.Text = "       Downloads"
+        Me.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.button5.UseVisualStyleBackColor = True
+        '
+        'button4
+        '
+        Me.button4.FlatAppearance.BorderSize = 0
+        Me.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button4.ForeColor = System.Drawing.Color.White
+        Me.button4.Image = CType(resources.GetObject("button4.Image"), System.Drawing.Image)
+        Me.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button4.Location = New System.Drawing.Point(12, 221)
+        Me.button4.Name = "button4"
+        Me.button4.Size = New System.Drawing.Size(197, 54)
+        Me.button4.TabIndex = 4
+        Me.button4.Text = "       Request Payment"
+        Me.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.button4.UseVisualStyleBackColor = True
+        '
         'button3
         '
         Me.button3.FlatAppearance.BorderSize = 0
@@ -201,6 +175,38 @@ Partial Class Form1
         Me.button3.Text = "       Sales Summery"
         Me.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button3.UseVisualStyleBackColor = True
+        '
+        'button2
+        '
+        Me.button2.FlatAppearance.BorderSize = 0
+        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button2.ForeColor = System.Drawing.Color.White
+        Me.button2.Image = CType(resources.GetObject("button2.Image"), System.Drawing.Image)
+        Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button2.Location = New System.Drawing.Point(12, 113)
+        Me.button2.Name = "button2"
+        Me.button2.Size = New System.Drawing.Size(197, 54)
+        Me.button2.TabIndex = 4
+        Me.button2.Text = "       My Books"
+        Me.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.button2.UseVisualStyleBackColor = True
+        '
+        'button1
+        '
+        Me.button1.FlatAppearance.BorderSize = 0
+        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button1.ForeColor = System.Drawing.Color.White
+        Me.button1.Image = CType(resources.GetObject("button1.Image"), System.Drawing.Image)
+        Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button1.Location = New System.Drawing.Point(12, 59)
+        Me.button1.Name = "button1"
+        Me.button1.Size = New System.Drawing.Size(197, 54)
+        Me.button1.TabIndex = 4
+        Me.button1.Text = "       Add Book"
+        Me.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.button1.UseVisualStyleBackColor = True
         '
         'button13
         '
@@ -247,11 +253,19 @@ Partial Class Form1
         Me.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button11.UseVisualStyleBackColor = True
         '
+        'AddBook1
+        '
+        Me.AddBook1.Location = New System.Drawing.Point(209, 48)
+        Me.AddBook1.Name = "AddBook1"
+        Me.AddBook1.Size = New System.Drawing.Size(817, 535)
+        Me.AddBook1.TabIndex = 12
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
+        Me.Controls.Add(Me.AddBook1)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.button13)
@@ -278,4 +292,6 @@ Partial Class Form1
     Private WithEvents button13 As Button
     Private WithEvents button12 As Button
     Private WithEvents button11 As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents AddBook1 As AddBook
 End Class

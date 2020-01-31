@@ -76,16 +76,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBook.Designer.vb">
+      <DependentUpon>AddBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="BookControl1.Designer.vb">
       <DependentUpon>BookControl1.vb</DependentUpon>
     </Compile>
     <Compile Include="BookControl1.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Browse.Designer.vb">
-      <DependentUpon>Browse.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Browse.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Downloads.Designer.vb">
@@ -141,11 +141,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddBook.resx">
+      <DependentUpon>AddBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookControl1.resx">
       <DependentUpon>BookControl1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Browse.resx">
-      <DependentUpon>Browse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Downloads.resx">
       <DependentUpon>Downloads.vb</DependentUpon>
@@ -196,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red_black_maroon_18147965271.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf-logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -6,26 +6,26 @@ Public Class Form1
         InitializeComponent()
         SidePanel.Height = button1.Height
         SidePanel.Top = button1.Top
-        Browse1.BringToFront()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles button1.Click
         SidePanel.Height = button1.Height
         SidePanel.Top = button1.Top
-        Browse1.BringToFront()
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles button2.Click
         SidePanel.Height = button2.Height
         SidePanel.Top = button2.Top
-        Wish1.BringToFront()
+
     End Sub
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles button3.Click
         SidePanel.Height = button3.Height
         SidePanel.Top = button3.Top
-        Rented1.BringToFront()
+
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles button13.Click
@@ -35,7 +35,7 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles button4.Click
         SidePanel.Height = button4.Height
         SidePanel.Top = button4.Top
-        MyBooks.BringToFront()
+
     End Sub
 
 
@@ -43,7 +43,7 @@ Public Class Form1
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles button5.Click
         SidePanel.Height = button5.Height
         SidePanel.Top = button5.Top
-        Downloads1.BringToFront()
+
     End Sub
 
 
@@ -98,6 +98,10 @@ Public Class Form1
     End Sub
 
     Private Sub Browse1_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub AddBook1_Load(sender As Object, e As EventArgs) Handles AddBook1.Load
 
     End Sub
 End Class
