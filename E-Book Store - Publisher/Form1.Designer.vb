@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.button14 = New System.Windows.Forms.Button()
@@ -37,11 +37,6 @@ Partial Class Form1
         Me.button13 = New System.Windows.Forms.Button()
         Me.button12 = New System.Windows.Forms.Button()
         Me.button11 = New System.Windows.Forms.Button()
-        Me.Downloads1 = New E_Book_Store___User.Downloads()
-        Me.MyBooks = New E_Book_Store___User.Rented()
-        Me.Rented1 = New E_Book_Store___User.Rented()
-        Me.Wish1 = New E_Book_Store___User.Wish()
-        Me.Browse1 = New E_Book_Store___User.Browse()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,7 +67,7 @@ Partial Class Form1
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(197, 54)
         Me.button2.TabIndex = 4
-        Me.button2.Text = "       Wish List"
+        Me.button2.Text = "       My Books"
         Me.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button2.UseVisualStyleBackColor = True
         '
@@ -88,7 +83,7 @@ Partial Class Form1
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(197, 54)
         Me.button1.TabIndex = 4
-        Me.button1.Text = "       Browse"
+        Me.button1.Text = "       Add Book"
         Me.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button1.UseVisualStyleBackColor = True
         '
@@ -120,7 +115,7 @@ Partial Class Form1
         Me.button4.Name = "button4"
         Me.button4.Size = New System.Drawing.Size(197, 54)
         Me.button4.TabIndex = 4
-        Me.button4.Text = "       My Books"
+        Me.button4.Text = "       Request Payment"
         Me.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button4.UseVisualStyleBackColor = True
         '
@@ -203,7 +198,7 @@ Partial Class Form1
         Me.button3.Name = "button3"
         Me.button3.Size = New System.Drawing.Size(197, 54)
         Me.button3.TabIndex = 4
-        Me.button3.Text = "       Rented Books"
+        Me.button3.Text = "       Sales Summery"
         Me.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button3.UseVisualStyleBackColor = True
         '
@@ -252,56 +247,16 @@ Partial Class Form1
         Me.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button11.UseVisualStyleBackColor = True
         '
-        'Downloads1
-        '
-        Me.Downloads1.Location = New System.Drawing.Point(209, 48)
-        Me.Downloads1.Name = "Downloads1"
-        Me.Downloads1.Size = New System.Drawing.Size(817, 535)
-        Me.Downloads1.TabIndex = 16
-        '
-        'MyBooks
-        '
-        Me.MyBooks.Location = New System.Drawing.Point(209, 48)
-        Me.MyBooks.Name = "MyBooks"
-        Me.MyBooks.Size = New System.Drawing.Size(817, 535)
-        Me.MyBooks.TabIndex = 15
-        '
-        'Rented1
-        '
-        Me.Rented1.Location = New System.Drawing.Point(209, 48)
-        Me.Rented1.Name = "Rented1"
-        Me.Rented1.Size = New System.Drawing.Size(817, 535)
-        Me.Rented1.TabIndex = 14
-        '
-        'Wish1
-        '
-        Me.Wish1.Location = New System.Drawing.Point(209, 48)
-        Me.Wish1.Name = "Wish1"
-        Me.Wish1.Size = New System.Drawing.Size(817, 535)
-        Me.Wish1.TabIndex = 13
-        '
-        'Browse1
-        '
-        Me.Browse1.Location = New System.Drawing.Point(209, 48)
-        Me.Browse1.Name = "Browse1"
-        Me.Browse1.Size = New System.Drawing.Size(817, 535)
-        Me.Browse1.TabIndex = 12
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
-        Me.Controls.Add(Me.Browse1)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.button13)
         Me.Controls.Add(Me.button12)
         Me.Controls.Add(Me.button11)
-        Me.Controls.Add(Me.Downloads1)
-        Me.Controls.Add(Me.MyBooks)
-        Me.Controls.Add(Me.Rented1)
-        Me.Controls.Add(Me.Wish1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -323,9 +278,4 @@ Partial Class Form1
     Private WithEvents button13 As Button
     Private WithEvents button12 As Button
     Private WithEvents button11 As Button
-    Friend WithEvents Browse1 As Browse
-    Friend WithEvents Wish1 As Wish
-    Friend WithEvents Rented1 As Rented
-    Friend WithEvents MyBooks As Rented
-    Friend WithEvents Downloads1 As Downloads
 End Class

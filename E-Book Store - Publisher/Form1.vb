@@ -97,7 +97,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Browse1_Load(sender As Object, e As EventArgs) Handles Browse1.Load
+    Private Sub Browse1_Load(sender As Object, e As EventArgs)
 
     End Sub
 End Class
