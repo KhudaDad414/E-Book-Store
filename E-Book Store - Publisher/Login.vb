@@ -8,8 +8,8 @@ Public Class Login
         email = MaterialTextField1.Text
         password = MaterialTextField2.Text
 
-        Dim publisher As New Publisher(email, password)
-        Dim isLoggedIn = publisher.Login()
+        Globals.CurrentUser = New Publisher(email, password)
+        Dim isLoggedIn = Globals.CurrentUser.Login()
         If isLoggedIn Then
             Form1.Show()
             Me.Hide()

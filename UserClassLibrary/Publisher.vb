@@ -71,6 +71,7 @@ Public Class Publisher
             Me.password = reader("password")
             Me.address = reader("address")
             Me.pinCode = reader("pinCode")
+            Me.ID = reader("ID")
 
             Me.accountNumber = reader("accountNumber")
 

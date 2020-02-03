@@ -1,4 +1,5 @@
 ﻿Public Class Person
+    Public Property ID As Integer
     Public Property firstName As String
     Public Property lastName As String
     Public Property mobileNumber As String
