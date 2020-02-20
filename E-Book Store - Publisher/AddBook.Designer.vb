@@ -33,6 +33,8 @@ Partial Class AddBook
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -48,7 +50,7 @@ Partial Class AddBook
         '
         Me.MaterialSingleLineTextField6.Depth = 0
         Me.MaterialSingleLineTextField6.Hint = "Pages"
-        Me.MaterialSingleLineTextField6.Location = New System.Drawing.Point(592, 235)
+        Me.MaterialSingleLineTextField6.Location = New System.Drawing.Point(592, 193)
         Me.MaterialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSingleLineTextField6.Name = "MaterialSingleLineTextField6"
         Me.MaterialSingleLineTextField6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -63,7 +65,7 @@ Partial Class AddBook
         '
         Me.MaterialSingleLineTextField5.Depth = 0
         Me.MaterialSingleLineTextField5.Hint = "Publish Year"
-        Me.MaterialSingleLineTextField5.Location = New System.Drawing.Point(592, 196)
+        Me.MaterialSingleLineTextField5.Location = New System.Drawing.Point(592, 154)
         Me.MaterialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSingleLineTextField5.Name = "MaterialSingleLineTextField5"
         Me.MaterialSingleLineTextField5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -78,7 +80,7 @@ Partial Class AddBook
         '
         Me.ComboBox1.BackColor = System.Drawing.SystemColors.Control
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(592, 274)
+        Me.ComboBox1.Location = New System.Drawing.Point(592, 232)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(209, 21)
         Me.ComboBox1.TabIndex = 23
@@ -87,7 +89,7 @@ Partial Class AddBook
         '
         Me.MaterialSingleLineTextField3.Depth = 0
         Me.MaterialSingleLineTextField3.Hint = "Price"
-        Me.MaterialSingleLineTextField3.Location = New System.Drawing.Point(592, 157)
+        Me.MaterialSingleLineTextField3.Location = New System.Drawing.Point(592, 115)
         Me.MaterialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSingleLineTextField3.Name = "MaterialSingleLineTextField3"
         Me.MaterialSingleLineTextField3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -102,7 +104,7 @@ Partial Class AddBook
         '
         Me.MaterialSingleLineTextField2.Depth = 0
         Me.MaterialSingleLineTextField2.Hint = "Author Name"
-        Me.MaterialSingleLineTextField2.Location = New System.Drawing.Point(592, 118)
+        Me.MaterialSingleLineTextField2.Location = New System.Drawing.Point(592, 76)
         Me.MaterialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSingleLineTextField2.Name = "MaterialSingleLineTextField2"
         Me.MaterialSingleLineTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -117,7 +119,7 @@ Partial Class AddBook
         '
         Me.MaterialSingleLineTextField1.Depth = 0
         Me.MaterialSingleLineTextField1.Hint = "Book Name"
-        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(590, 79)
+        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(590, 37)
         Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
         Me.MaterialSingleLineTextField1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -133,7 +135,7 @@ Partial Class AddBook
         Me.MaterialFlatButton1.AutoSize = True
         Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialFlatButton1.Depth = 0
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(592, 311)
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(592, 269)
         Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
@@ -149,7 +151,7 @@ Partial Class AddBook
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 79)
+        Me.Button1.Location = New System.Drawing.Point(16, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(200, 280)
         Me.Button1.TabIndex = 30
@@ -159,17 +161,37 @@ Partial Class AddBook
         'Button2
         '
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Location = New System.Drawing.Point(303, 79)
+        Me.Button2.Location = New System.Drawing.Point(303, 37)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(200, 280)
         Me.Button2.TabIndex = 31
         Me.Button2.Text = "SELECT A LOGO (200X280 PX)"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(16, 336)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(783, 23)
+        Me.ProgressBar1.TabIndex = 32
+        Me.ProgressBar1.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(384, 320)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 33
+        Me.Label1.Text = "Label1"
+        Me.Label1.Visible = False
+        '
         'AddBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MaterialFlatButton1)
@@ -198,4 +220,6 @@ Partial Class AddBook
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Label1 As Label
 End Class

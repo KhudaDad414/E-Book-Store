@@ -19,6 +19,7 @@ Public Class Form1
         SidePanel.Height = button2.Height
         SidePanel.Top = button2.Top
         Wish1.BringToFront()
+        Wish1.loadWishList()
     End Sub
 
 
@@ -26,6 +27,7 @@ Public Class Form1
         SidePanel.Height = button3.Height
         SidePanel.Top = button3.Top
         Rented1.BringToFront()
+        Rented1.loadRentedList()
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles button13.Click
@@ -44,6 +46,7 @@ Public Class Form1
         SidePanel.Height = button5.Height
         SidePanel.Top = button5.Top
         Downloads1.BringToFront()
+        Downloads1.loadDownloadList()
     End Sub
 
 
@@ -98,6 +101,14 @@ Public Class Form1
     End Sub
 
     Private Sub Browse1_Load(sender As Object, e As EventArgs) Handles Browse1.Load
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles panel1.Paint
+
+    End Sub
+
+    Private Sub BookDetails1_Load(sender As Object, e As EventArgs) Handles BookDetails1.Load
 
     End Sub
 End Class

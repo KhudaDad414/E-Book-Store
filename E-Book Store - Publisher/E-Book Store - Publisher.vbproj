@@ -82,12 +82,6 @@
     <Compile Include="AddBook.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BookControl1.Designer.vb">
-      <DependentUpon>BookControl1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BookControl1.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Downloads.Designer.vb">
       <DependentUpon>Downloads.vb</DependentUpon>
     </Compile>
@@ -134,19 +128,10 @@
     <Compile Include="Rented.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Wish.Designer.vb">
-      <DependentUpon>Wish.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Wish.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BookControl1.resx">
-      <DependentUpon>BookControl1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Downloads.resx">
       <DependentUpon>Downloads.vb</DependentUpon>
@@ -168,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rented.resx">
       <DependentUpon>Rented.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wish.resx">
-      <DependentUpon>Wish.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

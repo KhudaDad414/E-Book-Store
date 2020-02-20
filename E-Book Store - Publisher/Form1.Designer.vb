@@ -27,18 +27,18 @@ Partial Class Form1
         Me.panel2 = New System.Windows.Forms.Panel()
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.SidePanel = New System.Windows.Forms.Panel()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.button7 = New System.Windows.Forms.Button()
         Me.button6 = New System.Windows.Forms.Button()
-        Me.button5 = New System.Windows.Forms.Button()
         Me.button4 = New System.Windows.Forms.Button()
         Me.button3 = New System.Windows.Forms.Button()
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.button13 = New System.Windows.Forms.Button()
         Me.button12 = New System.Windows.Forms.Button()
         Me.button11 = New System.Windows.Forms.Button()
         Me.AddBook1 = New E_Book_Store___User.AddBook()
+        Me.button5 = New System.Windows.Forms.Button()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,10 +92,6 @@ Partial Class Form1
         Me.SidePanel.Size = New System.Drawing.Size(10, 54)
         Me.SidePanel.TabIndex = 4
         '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
         'button7
         '
         Me.button7.FlatAppearance.BorderSize = 0
@@ -108,7 +104,7 @@ Partial Class Form1
         Me.button7.Name = "button7"
         Me.button7.Size = New System.Drawing.Size(197, 54)
         Me.button7.TabIndex = 4
-        Me.button7.Text = "       User"
+        Me.button7.Text = "       Publisher's Info"
         Me.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button7.UseVisualStyleBackColor = True
         '
@@ -127,22 +123,6 @@ Partial Class Form1
         Me.button6.Text = "       Favourite"
         Me.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button6.UseVisualStyleBackColor = True
-        '
-        'button5
-        '
-        Me.button5.FlatAppearance.BorderSize = 0
-        Me.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button5.ForeColor = System.Drawing.Color.White
-        Me.button5.Image = CType(resources.GetObject("button5.Image"), System.Drawing.Image)
-        Me.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button5.Location = New System.Drawing.Point(12, 275)
-        Me.button5.Name = "button5"
-        Me.button5.Size = New System.Drawing.Size(197, 54)
-        Me.button5.TabIndex = 4
-        Me.button5.Text = "       Downloads"
-        Me.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.button5.UseVisualStyleBackColor = True
         '
         'button4
         '
@@ -208,6 +188,10 @@ Partial Class Form1
         Me.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button1.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'button13
         '
         Me.button13.FlatAppearance.BorderSize = 0
@@ -260,6 +244,22 @@ Partial Class Form1
         Me.AddBook1.Size = New System.Drawing.Size(817, 535)
         Me.AddBook1.TabIndex = 12
         '
+        'button5
+        '
+        Me.button5.FlatAppearance.BorderSize = 0
+        Me.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button5.ForeColor = System.Drawing.Color.White
+        Me.button5.Image = CType(resources.GetObject("button5.Image"), System.Drawing.Image)
+        Me.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button5.Location = New System.Drawing.Point(12, 275)
+        Me.button5.Name = "button5"
+        Me.button5.Size = New System.Drawing.Size(197, 54)
+        Me.button5.TabIndex = 4
+        Me.button5.Text = "       Downloads"
+        Me.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.button5.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -281,7 +281,6 @@ Partial Class Form1
     Private WithEvents button14 As Button
     Private WithEvents button2 As Button
     Private WithEvents button1 As Button
-    Private WithEvents button5 As Button
     Private WithEvents button4 As Button
     Private WithEvents panel2 As Panel
     Private WithEvents panel1 As Panel
@@ -294,4 +293,5 @@ Partial Class Form1
     Private WithEvents button11 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents AddBook1 As AddBook
+    Private WithEvents button5 As Button
 End Class

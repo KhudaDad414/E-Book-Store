@@ -1,27 +1,21 @@
 ﻿Imports System.Data.SqlClient
 Imports UserClassLibrary
-Public Class BookControl1
+Public Class UserControl2
     Public Property bookName As String
-    Public Property desc As String
-    Public Property price As String
     Public Property id As Integer
 
-    Public Sub New(name As String, desc As String, price As String, id As Integer)
+    Public Sub New(name As String, id As Integer)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
         Me.bookName = name
-        Me.desc = desc
-        Me.price = price
         Me.id = id
 
     End Sub
     Private Sub BookControl1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = bookName.Substring(0, 28) + "..."
-        Label2.Text = desc
-        Label3.Text = price & " ₹"
         loadImage()
     End Sub
     Private Sub loadImage()
@@ -64,7 +58,9 @@ Public Class BookControl1
         Globals.bookDetails.BringToFront()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+        Dim book As New Book()
+        book.ID = Me.id
+        book.Download(Globals.CurrentUser.ID)
     End Sub
 End Class

@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property hearted() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("hearted", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property red_black_maroon_1814796527() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("red_black_maroon_1814796527", resourceCulture)
@@ -76,6 +86,16 @@ Namespace My.Resources
         Friend ReadOnly Property red_black_maroon_18147965271() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("red_black_maroon_18147965271", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property un_hearted() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("un-hearted", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

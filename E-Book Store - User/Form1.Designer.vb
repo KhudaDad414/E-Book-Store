@@ -32,16 +32,16 @@ Partial Class Form1
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.SidePanel = New System.Windows.Forms.Panel()
         Me.button7 = New System.Windows.Forms.Button()
-        Me.button6 = New System.Windows.Forms.Button()
         Me.button3 = New System.Windows.Forms.Button()
         Me.button13 = New System.Windows.Forms.Button()
         Me.button12 = New System.Windows.Forms.Button()
         Me.button11 = New System.Windows.Forms.Button()
+        Me.BookDetails1 = New E_Book_Store___User.BookDetails()
+        Me.Browse1 = New E_Book_Store___User.Browse()
         Me.Downloads1 = New E_Book_Store___User.Downloads()
         Me.MyBooks = New E_Book_Store___User.Rented()
         Me.Rented1 = New E_Book_Store___User.Rented()
         Me.Wish1 = New E_Book_Store___User.Wish()
-        Me.Browse1 = New E_Book_Store___User.Browse()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -120,7 +120,7 @@ Partial Class Form1
         Me.button4.Name = "button4"
         Me.button4.Size = New System.Drawing.Size(197, 54)
         Me.button4.TabIndex = 4
-        Me.button4.Text = "       My Books"
+        Me.button4.Text = "       Owned Books"
         Me.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button4.UseVisualStyleBackColor = True
         '
@@ -138,7 +138,6 @@ Partial Class Form1
         Me.panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.panel1.Controls.Add(Me.SidePanel)
         Me.panel1.Controls.Add(Me.button7)
-        Me.panel1.Controls.Add(Me.button6)
         Me.panel1.Controls.Add(Me.button5)
         Me.panel1.Controls.Add(Me.button4)
         Me.panel1.Controls.Add(Me.button3)
@@ -167,29 +166,13 @@ Partial Class Form1
         Me.button7.ForeColor = System.Drawing.Color.White
         Me.button7.Image = CType(resources.GetObject("button7.Image"), System.Drawing.Image)
         Me.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button7.Location = New System.Drawing.Point(12, 383)
+        Me.button7.Location = New System.Drawing.Point(12, 335)
         Me.button7.Name = "button7"
         Me.button7.Size = New System.Drawing.Size(197, 54)
         Me.button7.TabIndex = 4
         Me.button7.Text = "       User"
         Me.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button7.UseVisualStyleBackColor = True
-        '
-        'button6
-        '
-        Me.button6.FlatAppearance.BorderSize = 0
-        Me.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button6.ForeColor = System.Drawing.Color.White
-        Me.button6.Image = CType(resources.GetObject("button6.Image"), System.Drawing.Image)
-        Me.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button6.Location = New System.Drawing.Point(12, 329)
-        Me.button6.Name = "button6"
-        Me.button6.Size = New System.Drawing.Size(197, 54)
-        Me.button6.TabIndex = 4
-        Me.button6.Text = "       Favourite"
-        Me.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.button6.UseVisualStyleBackColor = True
         '
         'button3
         '
@@ -252,6 +235,20 @@ Partial Class Form1
         Me.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button11.UseVisualStyleBackColor = True
         '
+        'BookDetails1
+        '
+        Me.BookDetails1.Location = New System.Drawing.Point(209, 48)
+        Me.BookDetails1.Name = "BookDetails1"
+        Me.BookDetails1.Size = New System.Drawing.Size(817, 535)
+        Me.BookDetails1.TabIndex = 17
+        '
+        'Browse1
+        '
+        Me.Browse1.Location = New System.Drawing.Point(209, 48)
+        Me.Browse1.Name = "Browse1"
+        Me.Browse1.Size = New System.Drawing.Size(817, 535)
+        Me.Browse1.TabIndex = 12
+        '
         'Downloads1
         '
         Me.Downloads1.Location = New System.Drawing.Point(209, 48)
@@ -280,18 +277,12 @@ Partial Class Form1
         Me.Wish1.Size = New System.Drawing.Size(817, 535)
         Me.Wish1.TabIndex = 13
         '
-        'Browse1
-        '
-        Me.Browse1.Location = New System.Drawing.Point(209, 48)
-        Me.Browse1.Name = "Browse1"
-        Me.Browse1.Size = New System.Drawing.Size(817, 535)
-        Me.Browse1.TabIndex = 12
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
+        Me.Controls.Add(Me.BookDetails1)
         Me.Controls.Add(Me.Browse1)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.panel1)
@@ -318,7 +309,6 @@ Partial Class Form1
     Private WithEvents panel1 As Panel
     Private WithEvents SidePanel As Panel
     Private WithEvents button7 As Button
-    Private WithEvents button6 As Button
     Private WithEvents button3 As Button
     Private WithEvents button13 As Button
     Private WithEvents button12 As Button
@@ -328,4 +318,5 @@ Partial Class Form1
     Friend WithEvents Rented1 As Rented
     Friend WithEvents MyBooks As Rented
     Friend WithEvents Downloads1 As Downloads
+    Friend WithEvents BookDetails1 As BookDetails
 End Class

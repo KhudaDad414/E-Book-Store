@@ -80,6 +80,7 @@ Public Class Customer
         reader = command.ExecuteReader()
 
         If reader.Read Then
+            Me.ID = reader("ID")
             Me.firstName = reader("firstName")
             Me.lastName = reader("lastName")
             Me.mobileNumber = reader("mobileNumber")

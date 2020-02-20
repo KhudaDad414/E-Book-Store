@@ -20,7 +20,7 @@ Public Class Browse
 
         adapter.Fill(table)
         RecomendedContainer.Controls.Clear()
-        For counter As Integer = 0 To 2
+        For counter As Integer = 0 To table.Rows.Count - 1
             Dim b1 As New BookControl1(table.Rows(counter)(0).ToString(), table.Rows(counter)(1).ToString(), table.Rows(counter)(2).ToString(), table.Rows(counter)(3))
             RecomendedContainer.Controls.Add(b1)
         Next
@@ -35,7 +35,7 @@ Public Class Browse
 
         adapter.Fill(table)
         BestSellerContainer.Controls.Clear()
-        For counter As Integer = 0 To 2
+        For counter As Integer = 0 To table.Rows.Count - 1
             Dim b1 As New BookControl1(table.Rows(counter)(0).ToString(), table.Rows(counter)(1).ToString(), table.Rows(counter)(2).ToString(), table.Rows(counter)(3))
             BestSellerContainer.Controls.Add(b1)
         Next
@@ -51,7 +51,7 @@ Public Class Browse
 
         adapter.Fill(table)
         TopFreeContainer.Controls.Clear()
-        For counter As Integer = 0 To 2
+        For counter As Integer = 0 To table.Rows.Count - 1
             Dim b1 As New BookControl1(table.Rows(counter)(0).ToString(), table.Rows(counter)(1).ToString(), table.Rows(counter)(2).ToString(), table.Rows(counter)(3))
             TopFreeContainer.Controls.Add(b1)
         Next

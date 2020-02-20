@@ -82,6 +82,12 @@
     <Compile Include="BookControl1.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="BookDetails.Designer.vb">
+      <DependentUpon>BookDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Browse.Designer.vb">
       <DependentUpon>Browse.vb</DependentUpon>
     </Compile>
@@ -100,6 +106,7 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Globals.vb" />
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -121,6 +128,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PaymentHandler.Designer.vb">
+      <DependentUpon>PaymentHandler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentHandler.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Register.Designer.vb">
       <DependentUpon>Register.vb</DependentUpon>
     </Compile>
@@ -133,6 +146,12 @@
     <Compile Include="Rented.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControl2.Designer.vb">
+      <DependentUpon>UserControl2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Wish.Designer.vb">
       <DependentUpon>Wish.vb</DependentUpon>
     </Compile>
@@ -143,6 +162,9 @@
   <ItemGroup>
     <EmbeddedResource Include="BookControl1.resx">
       <DependentUpon>BookControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookDetails.resx">
+      <DependentUpon>BookDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Browse.resx">
       <DependentUpon>Browse.vb</DependentUpon>
@@ -162,11 +184,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentHandler.resx">
+      <DependentUpon>PaymentHandler.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rented.resx">
       <DependentUpon>Rented.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wish.resx">
       <DependentUpon>Wish.vb</DependentUpon>
@@ -196,6 +224,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red_black_maroon_18147965271.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hearted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\un-hearted.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
