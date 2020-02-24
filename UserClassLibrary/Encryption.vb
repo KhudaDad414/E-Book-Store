@@ -13,6 +13,7 @@ Public Class Encryption
         Dim DerivedPassword As PasswordDeriveBytes = New PasswordDeriveBytes(Password, SaltValueBytes, HashAlgorithm, PasswordIterations)
         Dim KeyBytes As Byte() = DerivedPassword.GetBytes(KeySize / 8)
         Dim SymmetricKey As RijndaelManaged = New RijndaelManaged()
+        SymmetricKey.Padding = PaddingMode.PKCS7
         SymmetricKey.Mode = CipherMode.CBC
 
         Dim CipherTextBytes As Byte() = Nothing
@@ -42,6 +43,7 @@ Public Class Encryption
         Dim DerivedPassword As PasswordDeriveBytes = New PasswordDeriveBytes(password, SaltValueBytes, HashAlgorithm, PasswordIterations)
         Dim KeyBytes As Byte() = DerivedPassword.GetBytes(KeySize / 8)
         Dim SymmetricKey As RijndaelManaged = New RijndaelManaged()
+        SymmetricKey.Padding = PaddingMode.PKCS7
         SymmetricKey.Mode = CipherMode.CBC
         Dim PlainTextBytes As Byte() = New Byte(CipherBytes.Length - 1) {}
 

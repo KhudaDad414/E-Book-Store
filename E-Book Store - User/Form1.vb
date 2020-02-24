@@ -6,28 +6,28 @@ Public Class Form1
         InitializeComponent()
         SidePanel.Height = button1.Height
         SidePanel.Top = button1.Top
-        Browse1.BringToFront()
+        Browse2.BringToFront()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles button1.Click
         SidePanel.Height = button1.Height
         SidePanel.Top = button1.Top
-        Browse1.BringToFront()
+        Browse2.BringToFront()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles button2.Click
         SidePanel.Height = button2.Height
         SidePanel.Top = button2.Top
-        Wish1.BringToFront()
-        Wish1.loadWishList()
+        Wish2.BringToFront()
+        Wish2.loadWishList()
     End Sub
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles button3.Click
         SidePanel.Height = button3.Height
         SidePanel.Top = button3.Top
-        Rented1.BringToFront()
-        Rented1.loadRentedList()
+        Rented2.BringToFront()
+        Rented2.loadRentedList()
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles button13.Click
@@ -37,7 +37,8 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles button4.Click
         SidePanel.Height = button4.Height
         SidePanel.Top = button4.Top
-        MyBooks.BringToFront()
+        Bought2.BringToFront()
+        Bought2.loadBoughtList()
     End Sub
 
 
@@ -45,8 +46,8 @@ Public Class Form1
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles button5.Click
         SidePanel.Height = button5.Height
         SidePanel.Top = button5.Top
-        Downloads1.BringToFront()
-        Downloads1.loadDownloadList()
+        Downloads2.BringToFront()
+        Downloads2.loadDownloadList()
     End Sub
 
 
@@ -100,16 +101,11 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Browse1_Load(sender As Object, e As EventArgs) Handles Browse1.Load
-
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles button7.Click
+        SidePanel.Height = button7.Height
+        SidePanel.Top = button7.Top
+        UserInfo1.BringToFront()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles panel1.Paint
-
-    End Sub
-
-    Private Sub BookDetails1_Load(sender As Object, e As EventArgs) Handles BookDetails1.Load
-
-    End Sub
 End Class
 

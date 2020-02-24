@@ -82,10 +82,22 @@
     <Compile Include="BookControl1.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="BookControlDownloads.Designer.vb">
+      <DependentUpon>BookControlDownloads.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookControlDownloads.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="BookDetails.Designer.vb">
       <DependentUpon>BookDetails.vb</DependentUpon>
     </Compile>
     <Compile Include="BookDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bought.Designer.vb">
+      <DependentUpon>Bought.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bought.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Browse.Designer.vb">
@@ -134,6 +146,12 @@
     <Compile Include="PaymentHandler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PdfViewer.Designer.vb">
+      <DependentUpon>PdfViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PdfViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Register.Designer.vb">
       <DependentUpon>Register.vb</DependentUpon>
     </Compile>
@@ -152,6 +170,12 @@
     <Compile Include="UserControl2.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserInfo.Designer.vb">
+      <DependentUpon>UserInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Wish.Designer.vb">
       <DependentUpon>Wish.vb</DependentUpon>
     </Compile>
@@ -163,8 +187,14 @@
     <EmbeddedResource Include="BookControl1.resx">
       <DependentUpon>BookControl1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookControlDownloads.resx">
+      <DependentUpon>BookControlDownloads.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bought.resx">
+      <DependentUpon>Bought.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Browse.resx">
       <DependentUpon>Browse.vb</DependentUpon>
@@ -187,6 +217,9 @@
     <EmbeddedResource Include="PaymentHandler.resx">
       <DependentUpon>PaymentHandler.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PdfViewer.resx">
+      <DependentUpon>PdfViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo.resx">
+      <DependentUpon>UserInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wish.resx">
       <DependentUpon>Wish.vb</DependentUpon>
@@ -230,6 +266,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\un-hearted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boughtbooks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wishlist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

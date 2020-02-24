@@ -9,30 +9,30 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         SidePanel.Height = button1.Height
         SidePanel.Top = button1.Top
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         SidePanel.Height = button2.Height
         SidePanel.Top = button2.Top
 
     End Sub
 
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         SidePanel.Height = button3.Height
         SidePanel.Top = button3.Top
 
     End Sub
 
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles button13.Click
+    Private Sub Button13_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         SidePanel.Height = button4.Height
         SidePanel.Top = button4.Top
 
@@ -40,15 +40,8 @@ Public Class Form1
 
 
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles button5.Click
-        SidePanel.Height = button5.Height
-        SidePanel.Top = button5.Top
 
-    End Sub
-
-
-
-    Private Sub panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles panel2.MouseDown
+    Private Sub panel2_MouseDown(sender As Object, e As MouseEventArgs)
         If e.Button = Windows.Forms.MouseButtons.Left Then
             ' Get the new position
             mouseOffset = New Point(-e.X, -e.Y)
@@ -57,7 +50,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles panel2.MouseMove
+    Private Sub panel2_MouseMove(sender As Object, e As MouseEventArgs)
         If isMouseDown Then
             Dim mousePos As Point = Control.MousePosition
             ' Get the new form position
@@ -66,14 +59,14 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles panel2.MouseUp
+    Private Sub panel2_MouseUp(sender As Object, e As MouseEventArgs)
         If e.Button = Windows.Forms.MouseButtons.Left Then
             isMouseDown = False
         End If
     End Sub
 
 
-    Private Sub panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles panel1.MouseDown
+    Private Sub panel1_MouseDown(sender As Object, e As MouseEventArgs)
         If e.Button = Windows.Forms.MouseButtons.Left Then
             ' Get the new position
             mouseOffset = New Point(-e.X, -e.Y)
@@ -82,7 +75,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles panel1.MouseMove
+    Private Sub panel1_MouseMove(sender As Object, e As MouseEventArgs)
         If isMouseDown Then
             Dim mousePos As Point = Control.MousePosition
             ' Get the new form position
@@ -91,7 +84,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles panel1.MouseUp
+    Private Sub panel1_MouseUp(sender As Object, e As MouseEventArgs)
         If e.Button = Windows.Forms.MouseButtons.Left Then
             isMouseDown = False
         End If
@@ -102,6 +95,10 @@ Public Class Form1
     End Sub
 
     Private Sub AddBook1_Load(sender As Object, e As EventArgs) Handles AddBook1.Load
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

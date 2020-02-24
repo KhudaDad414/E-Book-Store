@@ -183,5 +183,23 @@
   <ItemGroup>
     <None Include="Resources\pdf-logo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boughtbooks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wishlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\requestPayment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesSummary.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

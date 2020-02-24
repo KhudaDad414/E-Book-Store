@@ -101,7 +101,7 @@ Public Class BookDetails
         If rentOption <> -1 Then
             paymentHandler()
             book.rent(Globals.CurrentUser.ID)
-            MsgBox("You have rented this book successfuly. you can download it from rented section.")
+
         End If
     End Sub
     Private Sub paymentHandler()
@@ -115,7 +115,7 @@ Public Class BookDetails
 
         paymentHandler()
         book.buy(Globals.CurrentUser.ID)
-        MsgBox("You have bought this book successfuly. you can download it from bought section.")
+
     End Sub
 
 

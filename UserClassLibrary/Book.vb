@@ -76,6 +76,14 @@ Public Class Book
 
     End Sub
 
+    Public Function open(userID As Integer) As String
+        Dim encryptedBytes = File.ReadAllBytes("./temp/" & Me.ID & userID & ".encrypt")
+        Dim decryptedBytes = Encryption.Decrypt(encryptedBytes, CStr(ID & userID), "mySalt")
+        If (Not File.Exists("./temp/temp/" & Me.ID & userID & ".pdf")) Then
+            File.WriteAllBytes("./temp/temp/" & Me.ID & userID & ".pdf", decryptedBytes)
+        End If
+        Return "./temp/temp/" & Me.ID & userID & ".pdf"
+    End Function
     Public Sub uploadPdf(path As String)
         PDF = File.ReadAllBytes(path)
         Dim connection As New SqlConnection(Constants.PublisherConnectionString)
@@ -88,7 +96,6 @@ Public Class Book
         command.ExecuteNonQuery()
         connection.Close()
     End Sub
-
     Public Sub addWished(userID As Integer)
         Dim connection As New SqlConnection(Constants.UserConnectionString)
         Dim reader As SqlDataReader
@@ -100,7 +107,6 @@ Public Class Book
         command.Parameters.Add(New SqlParameter("@CustId", userID))
         command.ExecuteNonQuery()
     End Sub
-
     Public Sub rent(userID As Integer)
         Dim connection As New SqlConnection(Constants.UserConnectionString)
         Dim reader As SqlDataReader
@@ -110,7 +116,14 @@ Public Class Book
         command.CommandType = CommandType.StoredProcedure
         command.Parameters.Add(New SqlParameter("@id", ID))
         command.Parameters.Add(New SqlParameter("@CustId", userID))
-        command.ExecuteNonQuery()
+        Try
+            command.ExecuteNonQuery()
+            MsgBox("You have rented this book successfuly. you can download it from rented section.")
+        Catch e As Exception
+            MsgBox("you already have this book.")
+        Finally
+            connection.Close()
+        End Try
     End Sub
 
     Public Sub buy(userID As Integer)
@@ -122,10 +135,17 @@ Public Class Book
         command.CommandType = CommandType.StoredProcedure
         command.Parameters.Add(New SqlParameter("@id", ID))
         command.Parameters.Add(New SqlParameter("@CustId", userID))
-        command.ExecuteNonQuery()
+        Try
+            command.ExecuteNonQuery()
+            MsgBox("You have bought this book successfuly. you can download it from bought section.")
+        Catch e As Exception
+            MsgBox("you already have this book.")
+        Finally
+            connection.Close()
+        End Try
+
+
     End Sub
-
-
     Public Sub Download(userID As Integer)
         Dim connection As New SqlConnection(Constants.UserConnectionString)
         Dim reader As SqlDataReader
@@ -141,10 +161,10 @@ Public Class Book
         Try
 
             Dim pdf = CType(command.ExecuteScalar, Byte())
-            Dim encodedPdf = Encryption.Encrypt(pdf, CStr(ID + userID), "mySalt")
+            Dim encodedPdf = Encryption.Encrypt(pdf, CStr(ID & userID), "mySalt")
             File.WriteAllBytes("./temp/" & Me.ID & userID & ".encrypt", encodedPdf)
             connection.Close()
-            MsgBox("book Downloaded.")
+
         Catch e As Exception
             MsgBox(e.ToString())
         End Try
@@ -152,14 +172,15 @@ Public Class Book
         If (File.Exists("./temp/books.list")) Then
             downloadedBooks = File.ReadAllText("./temp/books.list").Split("|"c)
         End If
+        If (downloadedBooks.Contains(CStr(ID))) Then
+            MsgBox("you already downloaded this book.")
+            Exit Sub
+        End If
         Array.Resize(downloadedBooks, downloadedBooks.Length + 1)
         downloadedBooks(downloadedBooks.Length - 1) = ID & "|"
         File.WriteAllText("./temp/books.list", String.Join("|", downloadedBooks))
-
+        MsgBox("book Downloaded.")
     End Sub
-
-
-
     Public Sub removeWished(userID As Integer)
         Dim connection As New SqlConnection(Constants.UserConnectionString)
         Dim reader As SqlDataReader
@@ -171,7 +192,6 @@ Public Class Book
         command.Parameters.Add(New SqlParameter("@CustId", userID))
         command.ExecuteNonQuery()
     End Sub
-
     Public Sub uploadCover(path As String)
         Cover = File.ReadAllBytes(path)
         Dim connection As New SqlConnection(Constants.PublisherConnectionString)
@@ -185,35 +205,4 @@ Public Class Book
 
         connection.Close()
     End Sub
-
-    'Public Function Login() As Boolean
-    '    Dim connection As New SqlConnection(Constants.PublisherConnectionString)
-    '    Dim reader As SqlDataReader
-
-    '    connection.Open()
-    '    Dim command As New SqlCommand("User.PublisherLogin", connection)
-    '    command.CommandType = CommandType.StoredProcedure
-    '    command.Parameters.Add(New SqlParameter("@email", email))
-    '    command.Parameters.Add(New SqlParameter("@password", password))
-
-    '    reader = command.ExecuteReader()
-
-    '    If reader.Read Then
-    '        Me.firstName = reader("companyName")
-    '        Me.mobileNumber = reader("mobileNumber")
-    '        Me.email = reader("email")
-    '        Me.password = reader("password")
-    '        Me.address = reader("address")
-    '        Me.pinCode = reader("pinCode")
-
-    '        Me.accountNumber = reader("accountNumber")
-
-    '        Return True
-    '    Else
-    '        MsgBox("User name or Password is wrong.")
-    '        Return False
-    '    End If
-
-    '    connection.Close()
-    'End Function
 End Class

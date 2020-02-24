@@ -13,6 +13,9 @@ Public Class Customer
         Me.email = email
         Me.password = password
     End Sub
+    Public Sub New()
+        ' left blank intentionally
+    End Sub
     Public Sub New(firstName As String, lastName As String, mobileNumber As String, email As String, password As String, address As String, pinCode As Integer, isCard As Boolean)
         Me.firstName = firstName
         Me.lastName = lastName
