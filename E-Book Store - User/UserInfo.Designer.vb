@@ -38,6 +38,7 @@ Partial Class UserInfo
         Me.MaterialLabel14 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialRaisedButton7 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.SuspendLayout()
         '
         'MaterialLabel1
@@ -225,11 +226,11 @@ Partial Class UserInfo
         'MaterialRaisedButton7
         '
         Me.MaterialRaisedButton7.Depth = 0
-        Me.MaterialRaisedButton7.Location = New System.Drawing.Point(176, 303)
+        Me.MaterialRaisedButton7.Location = New System.Drawing.Point(194, 347)
         Me.MaterialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton7.Name = "MaterialRaisedButton7"
         Me.MaterialRaisedButton7.Primary = True
-        Me.MaterialRaisedButton7.Size = New System.Drawing.Size(83, 19)
+        Me.MaterialRaisedButton7.Size = New System.Drawing.Size(83, 23)
         Me.MaterialRaisedButton7.TabIndex = 28
         Me.MaterialRaisedButton7.Text = "Change"
         Me.MaterialRaisedButton7.UseVisualStyleBackColor = True
@@ -239,15 +240,31 @@ Partial Class UserInfo
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"First Name", "Last Name", "Mobile Number", "E-mail", "Address", "Card Number", "Card Name"})
-        Me.ComboBox1.Location = New System.Drawing.Point(38, 301)
+        Me.ComboBox1.Location = New System.Drawing.Point(38, 320)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(116, 21)
         Me.ComboBox1.TabIndex = 29
+        '
+        'MaterialSingleLineTextField1
+        '
+        Me.MaterialSingleLineTextField1.Depth = 0
+        Me.MaterialSingleLineTextField1.Hint = ""
+        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(38, 347)
+        Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
+        Me.MaterialSingleLineTextField1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialSingleLineTextField1.SelectedText = ""
+        Me.MaterialSingleLineTextField1.SelectionLength = 0
+        Me.MaterialSingleLineTextField1.SelectionStart = 0
+        Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(137, 23)
+        Me.MaterialSingleLineTextField1.TabIndex = 30
+        Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
         '
         'UserInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.MaterialSingleLineTextField1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.MaterialRaisedButton7)
         Me.Controls.Add(Me.MaterialLabel8)
@@ -287,4 +304,5 @@ Partial Class UserInfo
     Friend WithEvents MaterialLabel14 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialRaisedButton7 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
 End Class

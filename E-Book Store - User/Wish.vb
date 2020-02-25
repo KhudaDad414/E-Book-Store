@@ -17,7 +17,7 @@ Public Class Wish
             Dim b1 As New BookControl1(table.Rows(counter)(0).ToString(), table.Rows(counter)(1).ToString(), table.Rows(counter)(2).ToString(), table.Rows(counter)(3))
             MyWishListContainer.Controls.Add(b1)
         Next
-
+        connection.Close()
     End Sub
 
     Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint

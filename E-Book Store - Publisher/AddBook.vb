@@ -22,7 +22,7 @@ Public Class AddBook
         Dim response = OpenFileDialog1.ShowDialog()
         If (response <> DialogResult.Cancel) Then
             logoAddress = OpenFileDialog1.FileName
-            Button2.Image = Image.FromFile(logoAddress)
+            Button2.BackgroundImage = Image.FromFile(logoAddress)
             coverButtonTitle = Button2.Text
             Button2.Text = ""
 
@@ -82,7 +82,7 @@ Public Class AddBook
         Button1.Text = pdfButtonTitle
         Button2.Text = coverButtonTitle
         Button1.Image = Nothing
-        Button2.Image = Nothing
+        Button2.BackgroundImage = Nothing
         Button1.Text = pdfButtonTitle
         Button2.Text = coverButtonTitle
     End Sub

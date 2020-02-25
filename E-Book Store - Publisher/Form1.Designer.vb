@@ -34,6 +34,8 @@ Partial Class Form1
         Me.button1 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.button13 = New System.Windows.Forms.Button()
+        Me.AddBook2 = New E_Book_Store___User.AddBook()
+        Me.MyBooks1 = New E_Book_Store___User.MyBooks()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -184,11 +186,27 @@ Partial Class Form1
         Me.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button13.UseVisualStyleBackColor = True
         '
+        'AddBook2
+        '
+        Me.AddBook2.Location = New System.Drawing.Point(209, 48)
+        Me.AddBook2.Name = "AddBook2"
+        Me.AddBook2.Size = New System.Drawing.Size(817, 535)
+        Me.AddBook2.TabIndex = 10
+        '
+        'MyBooks1
+        '
+        Me.MyBooks1.Location = New System.Drawing.Point(209, 48)
+        Me.MyBooks1.Name = "MyBooks1"
+        Me.MyBooks1.Size = New System.Drawing.Size(817, 535)
+        Me.MyBooks1.TabIndex = 11
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
+        Me.Controls.Add(Me.MyBooks1)
+        Me.Controls.Add(Me.AddBook2)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.button13)
@@ -211,4 +229,6 @@ Partial Class Form1
     Private WithEvents button13 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents AddBook1 As AddBook
+    Friend WithEvents AddBook2 As AddBook
+    Friend WithEvents MyBooks1 As MyBooks
 End Class

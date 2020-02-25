@@ -116,6 +116,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="MyBooks.Designer.vb">
+      <DependentUpon>MyBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyBooks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyBookSingle.Designer.vb">
+      <DependentUpon>MyBookSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyBookSingle.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Register.Designer.vb">
       <DependentUpon>Register.vb</DependentUpon>
     </Compile>
@@ -147,6 +159,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyBooks.resx">
+      <DependentUpon>MyBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyBookSingle.resx">
+      <DependentUpon>MyBookSingle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>

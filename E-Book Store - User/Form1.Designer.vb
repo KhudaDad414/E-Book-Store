@@ -258,6 +258,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
+        Me.Controls.Add(Me.UserInfo1)
         Me.Controls.Add(Me.BookDetails2)
         Me.Controls.Add(Me.Bought2)
         Me.Controls.Add(Me.Browse2)
@@ -267,7 +268,6 @@ Partial Class Form1
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.button13)
-        Me.Controls.Add(Me.UserInfo1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "Form1"
