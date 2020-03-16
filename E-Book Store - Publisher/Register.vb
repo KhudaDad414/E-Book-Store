@@ -1,13 +1,16 @@
-﻿Imports UserClassLibrary
+﻿Imports System.Text.RegularExpressions
+Imports UserClassLibrary
 Public Class Register
 
 
 
     Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
         Dim customer As New Publisher(MaterialTextField1.Text, MaterialTextField3.Text, MaterialTextField4.Text, MaterialTextField10.Text, MaterialTextField5.Text, Val(MaterialTextField6.Text), MaterialTextField7.Text)
-        customer.uploadInfo()
-        Login.Show()
-        Me.Hide()
+        If ValidateFields() Then
+            customer.uploadInfo()
+            Login.Show()
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,7 +23,42 @@ Public Class Register
         MaterialTextField5.Hint = "Address"
         MaterialTextField6.Hint = "Pin Code"
         MaterialTextField7.Hint = "Account Number"
+
+
+
     End Sub
+
+    Private Function ValidateFields() As Boolean
+
+        If (MaterialTextField1.Text.Equals("") Or MaterialTextField3.Text.Equals("") Or MaterialTextField4.Text.Equals("") Or MaterialTextField10.Text.Equals("") Or MaterialTextField11.Text.Equals("") Or MaterialTextField5.Text.Equals("") Or MaterialTextField6.Text.Equals("") Or MaterialTextField7.Text.Equals("")) Then
+            MsgBox("All fields are mandatory.")
+            Return False
+        End If
+
+        Dim regex As Regex = New Regex("^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$")
+        Dim match As Match = regex.Match(MaterialTextField4.Text)
+        If Not match.Success Then
+            MsgBox("Your email is not valid.")
+            Return False
+        End If
+
+        If Not MaterialTextField10.Text.Equals(MaterialTextField11.Text) Then
+            MsgBox("Your passwords doesn't match.")
+            Return False
+        End If
+
+        regex = New Regex("^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$")
+        match = regex.Match(MaterialTextField10.Text)
+        If Not match.Success Then
+            MsgBox("your password should contains a minimum of 7 characters, at least 1 uppercase letter, 1 lowercase letter, and 1 number with no spaces.")
+            Return False
+        End If
+
+
+        Return True
+
+
+    End Function
 
     Private Sub Register_Paint(sender As Object, g As PaintEventArgs) Handles Me.Paint
         Dim r As New Rectangle(364.75, 20, 296.5, 504)

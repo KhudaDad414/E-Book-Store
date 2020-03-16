@@ -33,14 +33,16 @@ Partial Class Form1
         Me.button3 = New System.Windows.Forms.Button()
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.button13 = New System.Windows.Forms.Button()
-        Me.UserInfo1 = New E_Book_Store___User.UserInfo()
         Me.Wish2 = New E_Book_Store___User.Wish()
-        Me.Rented2 = New E_Book_Store___User.Rented()
-        Me.Downloads2 = New E_Book_Store___User.Downloads()
-        Me.Browse2 = New E_Book_Store___User.Browse()
-        Me.Bought2 = New E_Book_Store___User.Bought()
+        Me.UserInfo1 = New E_Book_Store___User.UserInfo()
         Me.BookDetails2 = New E_Book_Store___User.BookDetails()
+        Me.Bought2 = New E_Book_Store___User.Bought()
+        Me.Browse2 = New E_Book_Store___User.Browse()
+        Me.Downloads2 = New E_Book_Store___User.Downloads()
+        Me.Rented2 = New E_Book_Store___User.Rented()
+        Me.SearchControl1 = New E_Book_Store___User.SearchControl()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -189,6 +191,14 @@ Partial Class Form1
         Me.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button1.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(233, 19)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(128, 27)
+        Me.TextBox1.TabIndex = 17
+        '
         'button13
         '
         Me.button13.FlatAppearance.BorderSize = 0
@@ -204,75 +214,86 @@ Partial Class Form1
         Me.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button13.UseVisualStyleBackColor = True
         '
-        'UserInfo1
-        '
-        Me.UserInfo1.Location = New System.Drawing.Point(209, 45)
-        Me.UserInfo1.Name = "UserInfo1"
-        Me.UserInfo1.Size = New System.Drawing.Size(817, 535)
-        Me.UserInfo1.TabIndex = 10
-        '
         'Wish2
         '
-        Me.Wish2.Location = New System.Drawing.Point(209, 45)
+        Me.Wish2.Location = New System.Drawing.Point(209, 46)
         Me.Wish2.Name = "Wish2"
         Me.Wish2.Size = New System.Drawing.Size(817, 535)
         Me.Wish2.TabIndex = 11
         '
-        'Rented2
+        'UserInfo1
         '
-        Me.Rented2.Location = New System.Drawing.Point(209, 45)
-        Me.Rented2.Name = "Rented2"
-        Me.Rented2.Size = New System.Drawing.Size(817, 535)
-        Me.Rented2.TabIndex = 12
+        Me.UserInfo1.Location = New System.Drawing.Point(209, 49)
+        Me.UserInfo1.Name = "UserInfo1"
+        Me.UserInfo1.Size = New System.Drawing.Size(817, 535)
+        Me.UserInfo1.TabIndex = 10
         '
-        'Downloads2
+        'BookDetails2
         '
-        Me.Downloads2.Location = New System.Drawing.Point(209, 45)
-        Me.Downloads2.Name = "Downloads2"
-        Me.Downloads2.Size = New System.Drawing.Size(817, 535)
-        Me.Downloads2.TabIndex = 13
-        '
-        'Browse2
-        '
-        Me.Browse2.Location = New System.Drawing.Point(209, 45)
-        Me.Browse2.Name = "Browse2"
-        Me.Browse2.Size = New System.Drawing.Size(817, 535)
-        Me.Browse2.TabIndex = 14
+        Me.BookDetails2.Location = New System.Drawing.Point(209, 48)
+        Me.BookDetails2.Name = "BookDetails2"
+        Me.BookDetails2.Size = New System.Drawing.Size(817, 535)
+        Me.BookDetails2.TabIndex = 16
         '
         'Bought2
         '
-        Me.Bought2.Location = New System.Drawing.Point(209, 45)
+        Me.Bought2.Location = New System.Drawing.Point(209, 48)
         Me.Bought2.Name = "Bought2"
         Me.Bought2.Size = New System.Drawing.Size(814, 530)
         Me.Bought2.TabIndex = 15
         '
-        'BookDetails2
+        'Browse2
         '
-        Me.BookDetails2.Location = New System.Drawing.Point(209, 45)
-        Me.BookDetails2.Name = "BookDetails2"
-        Me.BookDetails2.Size = New System.Drawing.Size(817, 535)
-        Me.BookDetails2.TabIndex = 16
+        Me.Browse2.Location = New System.Drawing.Point(209, 48)
+        Me.Browse2.Name = "Browse2"
+        Me.Browse2.Size = New System.Drawing.Size(817, 535)
+        Me.Browse2.TabIndex = 14
+        '
+        'Downloads2
+        '
+        Me.Downloads2.Location = New System.Drawing.Point(209, 46)
+        Me.Downloads2.Name = "Downloads2"
+        Me.Downloads2.Size = New System.Drawing.Size(817, 535)
+        Me.Downloads2.TabIndex = 13
+        '
+        'Rented2
+        '
+        Me.Rented2.Location = New System.Drawing.Point(209, 46)
+        Me.Rented2.Name = "Rented2"
+        Me.Rented2.Size = New System.Drawing.Size(817, 535)
+        Me.Rented2.TabIndex = 12
+        '
+        'SearchControl1
+        '
+        Me.SearchControl1.Location = New System.Drawing.Point(209, 49)
+        Me.SearchControl1.Name = "SearchControl1"
+        Me.SearchControl1.Size = New System.Drawing.Size(817, 535)
+        Me.SearchControl1.TabIndex = 18
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
+        Me.Controls.Add(Me.SearchControl1)
+        Me.Controls.Add(Me.Wish2)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.UserInfo1)
         Me.Controls.Add(Me.BookDetails2)
         Me.Controls.Add(Me.Bought2)
         Me.Controls.Add(Me.Browse2)
         Me.Controls.Add(Me.Downloads2)
         Me.Controls.Add(Me.Rented2)
-        Me.Controls.Add(Me.Wish2)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.button13)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Private WithEvents button14 As Button
@@ -299,4 +320,6 @@ Partial Class Form1
     Friend WithEvents Browse2 As Browse
     Friend WithEvents Bought2 As Bought
     Friend WithEvents BookDetails2 As BookDetails
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SearchControl1 As SearchControl
 End Class

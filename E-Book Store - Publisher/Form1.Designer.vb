@@ -27,15 +27,18 @@ Partial Class Form1
         Me.panel2 = New System.Windows.Forms.Panel()
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.SidePanel = New System.Windows.Forms.Panel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.button7 = New System.Windows.Forms.Button()
         Me.button4 = New System.Windows.Forms.Button()
         Me.button3 = New System.Windows.Forms.Button()
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.button13 = New System.Windows.Forms.Button()
-        Me.AddBook2 = New E_Book_Store___User.AddBook()
+        Me.RequestPayment1 = New E_Book_Store___User.RequestPayment()
+        Me.SalesSummery1 = New E_Book_Store___User.salesSummery()
         Me.MyBooks1 = New E_Book_Store___User.MyBooks()
+        Me.AddBook2 = New E_Book_Store___User.AddBook()
+        Me.PublisherInfo1 = New E_Book_Store___User.PublisherInfo()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -86,6 +89,10 @@ Partial Class Form1
         Me.SidePanel.Name = "SidePanel"
         Me.SidePanel.Size = New System.Drawing.Size(10, 54)
         Me.SidePanel.TabIndex = 4
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'button7
         '
@@ -167,10 +174,6 @@ Partial Class Form1
         Me.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button1.UseVisualStyleBackColor = True
         '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
         'button13
         '
         Me.button13.FlatAppearance.BorderSize = 0
@@ -186,12 +189,19 @@ Partial Class Form1
         Me.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.button13.UseVisualStyleBackColor = True
         '
-        'AddBook2
+        'RequestPayment1
         '
-        Me.AddBook2.Location = New System.Drawing.Point(209, 48)
-        Me.AddBook2.Name = "AddBook2"
-        Me.AddBook2.Size = New System.Drawing.Size(817, 535)
-        Me.AddBook2.TabIndex = 10
+        Me.RequestPayment1.Location = New System.Drawing.Point(209, 48)
+        Me.RequestPayment1.Name = "RequestPayment1"
+        Me.RequestPayment1.Size = New System.Drawing.Size(817, 535)
+        Me.RequestPayment1.TabIndex = 13
+        '
+        'SalesSummery1
+        '
+        Me.SalesSummery1.Location = New System.Drawing.Point(209, 48)
+        Me.SalesSummery1.Name = "SalesSummery1"
+        Me.SalesSummery1.Size = New System.Drawing.Size(817, 535)
+        Me.SalesSummery1.TabIndex = 12
         '
         'MyBooks1
         '
@@ -200,11 +210,28 @@ Partial Class Form1
         Me.MyBooks1.Size = New System.Drawing.Size(817, 535)
         Me.MyBooks1.TabIndex = 11
         '
+        'AddBook2
+        '
+        Me.AddBook2.Location = New System.Drawing.Point(209, 48)
+        Me.AddBook2.Name = "AddBook2"
+        Me.AddBook2.Size = New System.Drawing.Size(817, 535)
+        Me.AddBook2.TabIndex = 10
+        '
+        'PublisherInfo1
+        '
+        Me.PublisherInfo1.Location = New System.Drawing.Point(209, 48)
+        Me.PublisherInfo1.Name = "PublisherInfo1"
+        Me.PublisherInfo1.Size = New System.Drawing.Size(817, 535)
+        Me.PublisherInfo1.TabIndex = 14
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 583)
+        Me.Controls.Add(Me.PublisherInfo1)
+        Me.Controls.Add(Me.RequestPayment1)
+        Me.Controls.Add(Me.SalesSummery1)
         Me.Controls.Add(Me.MyBooks1)
         Me.Controls.Add(Me.AddBook2)
         Me.Controls.Add(Me.panel2)
@@ -231,4 +258,7 @@ Partial Class Form1
     Friend WithEvents AddBook1 As AddBook
     Friend WithEvents AddBook2 As AddBook
     Friend WithEvents MyBooks1 As MyBooks
+    Friend WithEvents SalesSummery1 As salesSummery
+    Friend WithEvents RequestPayment1 As RequestPayment
+    Friend WithEvents PublisherInfo1 As PublisherInfo
 End Class

@@ -47,13 +47,17 @@ Public Class Customer
 
 
         If isCard Then
-            command.Parameters.Add(New SqlParameter("@cardNumber", DBNull.Value))
-            command.Parameters.Add(New SqlParameter("@cardName", DBNull.Value))
-            command.Parameters.Add(New SqlParameter("@CVV", DBNull.Value))
-        Else
+
             command.Parameters.Add(New SqlParameter("@cardNumber", cardNumber))
             command.Parameters.Add(New SqlParameter("@cardName", cardName))
             command.Parameters.Add(New SqlParameter("@CVV", CVV))
+
+        Else
+
+            command.Parameters.Add(New SqlParameter("@cardNumber", DBNull.Value))
+            command.Parameters.Add(New SqlParameter("@cardName", DBNull.Value))
+            command.Parameters.Add(New SqlParameter("@CVV", DBNull.Value))
+
 
         End If
         Try

@@ -100,12 +100,22 @@ Public Class BookDetails
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         If rentOption <> -1 Then
             paymentHandler()
-            book.rent(Globals.CurrentUser.ID)
+            If rentOption = 0 Then
+                book.rent(Globals.CurrentUser.ID, 0.3)
+            ElseIf rentOption = 1 Then
+                book.rent(Globals.CurrentUser.ID, 0.4)
+            Else
+                book.rent(Globals.CurrentUser.ID, 0.5)
+            End If
+
 
         End If
     End Sub
     Private Sub paymentHandler()
-        'handle payment here
+        If (book.Price > 0) Then
+            InputBox("Enter your CVV")
+            PaymentScreen.ShowDialog()
+        End If
     End Sub
 
 

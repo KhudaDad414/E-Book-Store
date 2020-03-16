@@ -7,6 +7,7 @@ Public Class Form1
         SidePanel.Height = button1.Height
         SidePanel.Top = button1.Top
 
+
     End Sub
 
     Private Sub panel2_MouseDown(sender As Object, e As MouseEventArgs)
@@ -80,16 +81,20 @@ Public Class Form1
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles button3.Click
         SidePanel.Height = button3.Height
         SidePanel.Top = button3.Top
+        SalesSummery1.BringToFront()
+        SalesSummery1.loadInfo()
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles button4.Click
         SidePanel.Height = button4.Height
         SidePanel.Top = button4.Top
+        RequestPayment1.BringToFront()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles button7.Click
         SidePanel.Height = button7.Height
         SidePanel.Top = button7.Top
+        PublisherInfo1.BringToFront()
     End Sub
 
     Private Sub Button13_Click_1(sender As Object, e As EventArgs) Handles button13.Click
@@ -101,5 +106,11 @@ Public Class Form1
         SidePanel.Top = button1.Top
         AddBook2.BringToFront()
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+
 End Class
 

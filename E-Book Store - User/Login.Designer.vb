@@ -77,7 +77,7 @@ Partial Class Login
         Me.MaterialTextField2.Location = New System.Drawing.Point(396, 229)
         Me.MaterialTextField2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTextField2.Name = "MaterialTextField2"
-        Me.MaterialTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.MaterialTextField2.SelectedText = ""
         Me.MaterialTextField2.SelectionLength = 0
         Me.MaterialTextField2.SelectionStart = 0

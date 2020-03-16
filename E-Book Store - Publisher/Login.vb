@@ -1,20 +1,35 @@
-﻿Imports UserClassLibrary
+﻿Imports System.Text.RegularExpressions
+Imports UserClassLibrary
 
 Public Class Login
     Dim email As String
     Dim password As String
 
     Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
+
         email = MaterialTextField1.Text
         password = MaterialTextField2.Text
+        If ValidateFields() Then
 
-        Globals.CurrentUser = New Publisher(email, password)
-        Dim isLoggedIn = Globals.CurrentUser.Login()
-        If isLoggedIn Then
-            Form1.Show()
-            Me.Hide()
+            Globals.CurrentUser = New Publisher(email, password)
+            Dim isLoggedIn = Globals.CurrentUser.Login()
+            If isLoggedIn Then
+                Form1.Show()
+                Me.Hide()
+            End If
         End If
     End Sub
+
+    Private Function ValidateFields() As Boolean
+
+        Dim regex As Regex = New Regex("^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$")
+        Dim match As Match = regex.Match(email)
+        If Not match.Success Then
+            MsgBox("Your email is not valid.")
+            Return False
+        End If
+        Return True
+    End Function
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Register.Show()

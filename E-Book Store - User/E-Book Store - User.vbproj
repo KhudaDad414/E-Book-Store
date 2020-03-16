@@ -146,6 +146,12 @@
     <Compile Include="PaymentHandler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PaymentScreen.Designer.vb">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PdfViewer.Designer.vb">
       <DependentUpon>PdfViewer.vb</DependentUpon>
     </Compile>
@@ -162,6 +168,12 @@
       <DependentUpon>Rented.vb</DependentUpon>
     </Compile>
     <Compile Include="Rented.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchControl.Designer.vb">
+      <DependentUpon>SearchControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl2.Designer.vb">
@@ -217,6 +229,9 @@
     <EmbeddedResource Include="PaymentHandler.resx">
       <DependentUpon>PaymentHandler.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PdfViewer.resx">
       <DependentUpon>PdfViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rented.resx">
       <DependentUpon>Rented.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchControl.resx">
+      <DependentUpon>SearchControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.vb</DependentUpon>

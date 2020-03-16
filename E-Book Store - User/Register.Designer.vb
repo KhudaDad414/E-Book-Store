@@ -105,7 +105,7 @@ Partial Class Register
         Me.MaterialTextField10.Location = New System.Drawing.Point(374, 167)
         Me.MaterialTextField10.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTextField10.Name = "MaterialTextField10"
-        Me.MaterialTextField10.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialTextField10.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.MaterialTextField10.SelectedText = ""
         Me.MaterialTextField10.SelectionLength = 0
         Me.MaterialTextField10.SelectionStart = 0
@@ -120,7 +120,7 @@ Partial Class Register
         Me.MaterialTextField11.Location = New System.Drawing.Point(374, 196)
         Me.MaterialTextField11.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTextField11.Name = "MaterialTextField11"
-        Me.MaterialTextField11.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialTextField11.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.MaterialTextField11.SelectedText = ""
         Me.MaterialTextField11.SelectionLength = 0
         Me.MaterialTextField11.SelectionStart = 0

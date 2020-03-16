@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports UserClassLibrary
 Public Class Browse
     Private Sub Browse_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim connetionString = "Data Source=.;Initial Catalog=EBookStore; User ID=EBookUser;Password=user123"
-        Dim connection As New SqlConnection(connetionString)
+        Dim connection As New SqlConnection(Constants.UserConnectionString)
         connection.Open()
 
         loadTopFree(connection)

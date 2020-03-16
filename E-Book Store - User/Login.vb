@@ -1,4 +1,5 @@
-﻿Imports UserClassLibrary
+﻿Imports System.Text.RegularExpressions
+Imports UserClassLibrary
 
 Public Class Login
     Dim email As String
@@ -8,14 +9,25 @@ Public Class Login
         email = MaterialTextField1.Text
         password = MaterialTextField2.Text
 
-        Globals.CurrentUser = New Customer(email, password)
-        Dim isLoggedIn = Globals.CurrentUser.Login()
-        If isLoggedIn Then
-            Form1.Show()
-            Me.Hide()
+        If ValidateFields() Then
+            Globals.CurrentUser = New Customer(email, password)
+            Dim isLoggedIn = Globals.CurrentUser.Login()
+            If isLoggedIn Then
+                Form1.Show()
+                Me.Hide()
+            End If
         End If
     End Sub
+    Private Function ValidateFields() As Boolean
 
+        Dim regex As Regex = New Regex("^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$")
+        Dim match As Match = regex.Match(email)
+        If Not match.Success Then
+            MsgBox("Your email is not valid.")
+            Return False
+        End If
+        Return True
+    End Function
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Register.Show()
         Me.Hide()
@@ -38,6 +50,8 @@ Public Class Login
 
 
     End Sub
+
+
 
     Private Sub Login_Paint(sender As Object, g As PaintEventArgs) Handles Me.Paint
         Dim r As New Rectangle(384.75, 145.75, 256.5, 291.5)

@@ -1,4 +1,5 @@
-﻿Imports UserClassLibrary
+﻿Imports System.Text.RegularExpressions
+Imports UserClassLibrary
 Public Class Register
     Private Sub MaterialCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckBox1.CheckedChanged
         If MaterialCheckBox1.Checked Then
@@ -25,12 +26,50 @@ Public Class Register
             customer.cardNumber = MaterialTextField8.Text
             customer.CVV = Val(MaterialTextField9.Text)
         End If
-
-        customer.uploadInfo()
-        Login.Show()
-        Me.Hide()
+        If ValidateFields() Then
+            customer.uploadInfo()
+            Login.Show()
+            Me.Hide()
+        End If
     End Sub
+    Private Function ValidateFields() As Boolean
 
+        If (MaterialTextField1.Text.Equals("") Or MaterialTextField2.Text.Equals("") Or MaterialTextField3.Text.Equals("") Or MaterialTextField4.Text.Equals("") Or MaterialTextField10.Text.Equals("") Or MaterialTextField11.Text.Equals("") Or MaterialTextField5.Text.Equals("") Or MaterialTextField6.Text.Equals("")) Then
+            MsgBox("All fields are mandatory.")
+            Return False
+        End If
+
+        If Not MaterialCheckBox1.Checked Then
+            If (MaterialTextField7.Text.Equals("") Or MaterialTextField8.Text.Equals("") Or MaterialTextField9.Text.Equals("")) Then
+                MsgBox("All fields are mandatory.")
+                Return False
+            End If
+        End If
+
+        Dim regex As Regex = New Regex("^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$")
+        Dim match As Match = regex.Match(MaterialTextField4.Text)
+        If Not match.Success Then
+            MsgBox("Your email is not valid.")
+            Return False
+        End If
+
+        If Not MaterialTextField10.Text.Equals(MaterialTextField11.Text) Then
+            MsgBox("Your passwords doesn't match.")
+            Return False
+        End If
+
+        regex = New Regex("^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$")
+        match = regex.Match(MaterialTextField10.Text)
+        If Not match.Success Then
+            MsgBox("your password should contains a minimum of 7 characters, at least 1 uppercase letter, 1 lowercase letter, and 1 number with no spaces.")
+            Return False
+        End If
+
+
+        Return True
+
+
+    End Function
     Private Sub Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CenterForm(Me)
         MaterialTextField1.Hint = "First Name"

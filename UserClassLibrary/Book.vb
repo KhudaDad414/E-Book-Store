@@ -79,6 +79,9 @@ Public Class Book
     Public Function open(userID As Integer) As String
         Dim encryptedBytes = File.ReadAllBytes("./temp/" & Me.ID & userID & ".encrypt")
         Dim decryptedBytes = Encryption.Decrypt(encryptedBytes, CStr(ID & userID), "mySalt")
+        If Not Directory.Exists("./temp/temp/") Then
+            Directory.CreateDirectory("./temp/temp/")
+        End If
         If (Not File.Exists("./temp/temp/" & Me.ID & userID & ".pdf")) Then
             File.WriteAllBytes("./temp/temp/" & Me.ID & userID & ".pdf", decryptedBytes)
         End If
@@ -107,7 +110,7 @@ Public Class Book
         command.Parameters.Add(New SqlParameter("@CustId", userID))
         command.ExecuteNonQuery()
     End Sub
-    Public Sub rent(userID As Integer)
+    Public Sub rent(userID As Integer, period As Double)
         Dim connection As New SqlConnection(Constants.UserConnectionString)
         Dim reader As SqlDataReader
 
@@ -116,11 +119,12 @@ Public Class Book
         command.CommandType = CommandType.StoredProcedure
         command.Parameters.Add(New SqlParameter("@id", ID))
         command.Parameters.Add(New SqlParameter("@CustId", userID))
+        command.Parameters.Add(New SqlParameter("@Period", period))
         Try
             command.ExecuteNonQuery()
             MsgBox("You have rented this book successfuly. you can download it from rented section.")
         Catch e As Exception
-            MsgBox("you already have this book.")
+            MsgBox("you already have this book.  So we canceled your transaction.")
         Finally
             connection.Close()
         End Try
@@ -139,7 +143,7 @@ Public Class Book
             command.ExecuteNonQuery()
             MsgBox("You have bought this book successfuly. you can download it from bought section.")
         Catch e As Exception
-            MsgBox("you already have this book.")
+            MsgBox("you already have this book. So we canceled your transaction.")
         Finally
             connection.Close()
         End Try

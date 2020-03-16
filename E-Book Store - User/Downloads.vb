@@ -4,12 +4,21 @@ Imports System.IO
 Public Class Downloads
     Public Sub loadDownloadList()
         MyWishListContainer.Controls.Clear()
+        If Not Directory.Exists("./temp/") Then
+            Directory.CreateDirectory("./temp/")
+            File.Create("./temp/books.list")
+            Return
+        ElseIf Not File.Exists("./temp/books.list") Then
+            File.Create("./temp/books.list")
+            Return
+        End If
         Dim list As String = File.ReadAllText("./temp/books.list")
         Dim connection As New SqlConnection(Constants.UserConnectionString)
         Dim command As New SqlCommand("User.getUserDownloadsList", connection)
         command.CommandType = CommandType.StoredProcedure
 
         command.Parameters.Add(New SqlParameter("@bookList", list))
+        command.Parameters.Add(New SqlParameter("@CustID", Globals.CurrentUser.ID))
         Dim table As New DataTable()
         Dim adapter As New SqlDataAdapter(command)
         adapter.Fill(table)

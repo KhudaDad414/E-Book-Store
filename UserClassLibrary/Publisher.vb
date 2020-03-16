@@ -20,6 +20,9 @@ Public Class Publisher
         Me.accountNumber = account
     End Sub
 
+    Public Sub New()
+    End Sub
+
     Public Sub uploadInfo()
         Dim connection As New SqlConnection(Constants.PublisherConnectionString)
         connection.Open()
