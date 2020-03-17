@@ -19,7 +19,11 @@ Public Class BookControl1
 
     End Sub
     Private Sub BookControl1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = bookName.Substring(0, 28) + "..."
+        If bookName.Length > 28 Then
+            Label1.Text = bookName.Substring(0, 28) + "..."
+        Else
+            Label1.Text = bookName
+        End If
         Label2.Text = desc
         Label3.Text = price & " ₹"
         loadImage()

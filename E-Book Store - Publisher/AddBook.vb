@@ -86,12 +86,63 @@ Public Class AddBook
         Button1.Text = pdfButtonTitle
         Button2.Text = coverButtonTitle
     End Sub
-    Private Sub uploadInfo()
+    Private Sub MaterialSingleLineTextField6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialSingleLineTextField6.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialSingleLineTextField6.Text.Length > 3) Then
+            e.Handled = True
+            Return
+        End If
 
-
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
     End Sub
 
-    Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub MaterialSingleLineTextField5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialSingleLineTextField5.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialSingleLineTextField5.Text.Length > 3) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+    End Sub
+
+
+    Private Sub MaterialSingleLineTextField3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialSingleLineTextField3.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialSingleLineTextField3.Text.Length > 3) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+    End Sub
+
+
+
+    Private Sub MaterialSingleLineTextField2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialSingleLineTextField2.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Or e.KeyChar = Convert.ToChar(Keys.Space) Then Exit Sub
+        If (MaterialSingleLineTextField2.Text.Length > 50) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 65 Or KeyAscii > 122) Then
+            e.Handled = True
+            Return
+        End If
     End Sub
 End Class

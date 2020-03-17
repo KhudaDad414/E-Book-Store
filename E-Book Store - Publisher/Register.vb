@@ -90,4 +90,51 @@ Public Class Register
         Login.Show()
         Me.Hide()
     End Sub
+
+
+
+    Private Sub MaterialTextField7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField7.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialTextField7.Text.Length > 10) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
+
+    Private Sub MaterialTextField6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField6.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialTextField6.Text.Length > 5) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
+
+    Private Sub MaterialTextField3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField3.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialTextField3.Text.Length > 9) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
 End Class

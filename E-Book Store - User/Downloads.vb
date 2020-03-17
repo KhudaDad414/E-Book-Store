@@ -6,11 +6,13 @@ Public Class Downloads
         MyWishListContainer.Controls.Clear()
         If Not Directory.Exists("./temp/") Then
             Directory.CreateDirectory("./temp/")
-            File.Create("./temp/books.list")
-            Return
+            Dim f = File.Create("./temp/books.list")
+            f.Close()
+            Exit Sub
         ElseIf Not File.Exists("./temp/books.list") Then
-            File.Create("./temp/books.list")
-            Return
+            Dim f = File.Create("./temp/books.list")
+            f.Close()
+            Exit Sub
         End If
         Dim list As String = File.ReadAllText("./temp/books.list")
         Dim connection As New SqlConnection(Constants.UserConnectionString)

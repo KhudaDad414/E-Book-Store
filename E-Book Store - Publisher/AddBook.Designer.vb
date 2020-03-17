@@ -79,7 +79,9 @@ Partial Class AddBook
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Children's", "Teen and Young Adult", "Self-Help", "Literature & Fiction", "Mystery & Thriller", "Sci-fi & Fantasy", "Romance"})
         Me.ComboBox1.Location = New System.Drawing.Point(592, 232)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(209, 21)

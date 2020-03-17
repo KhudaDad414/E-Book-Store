@@ -84,7 +84,51 @@ Public Class Register
         MaterialTextField8.Hint = "Name On the Card"
         MaterialTextField9.Hint = "CVV"
     End Sub
+    Private Sub MaterialTextField7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField7.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
 
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialTextField7.Text.Length > 13) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
+
+    Private Sub MaterialTextField6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField6.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialTextField6.Text.Length > 5) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
+
+    Private Sub MaterialTextField3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField3.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+        If (MaterialTextField3.Text.Length > 9) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
     Private Sub Register_Paint(sender As Object, g As PaintEventArgs) Handles Me.Paint
         Dim r As New Rectangle(364.75, 20, 296.5, 504)
         Dim d = 50
@@ -114,5 +158,22 @@ Public Class Register
     Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
         Login.Show()
         Me.Hide()
+    End Sub
+
+
+
+    Private Sub MaterialTextField9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MaterialTextField9.KeyPress
+        Dim KeyAscii As Short = Convert.ToInt32(e.KeyChar)
+        If e.KeyChar = Convert.ToChar(Keys.Back) Then Exit Sub
+
+        If (MaterialTextField9.Text.Length > 2) Then
+            e.Handled = True
+            Return
+        End If
+
+        If (KeyAscii < 48 Or KeyAscii > 57) Then
+            e.Handled = True
+            Return
+        End If
     End Sub
 End Class

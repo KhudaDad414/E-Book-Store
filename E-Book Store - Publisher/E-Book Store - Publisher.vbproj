@@ -225,7 +225,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UserClassLibrary\UserClassLibrary.vbproj">
@@ -234,6 +233,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\red_black_maroon_1814796527.jpg" />
   </ItemGroup>
   <ItemGroup>

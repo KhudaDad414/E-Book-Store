@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports UserClassLibrary
+Imports System.Text.RegularExpressions
+
 Public Class BookDetails
     Dim book As New Book()
     Dim rentOption = -1
@@ -98,8 +100,7 @@ Public Class BookDetails
     End Sub
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
-        If rentOption <> -1 Then
-            paymentHandler()
+        If rentOption <> -1 And paymentHandler() Then
             If rentOption = 0 Then
                 book.rent(Globals.CurrentUser.ID, 0.3)
             ElseIf rentOption = 1 Then
@@ -111,21 +112,26 @@ Public Class BookDetails
 
         End If
     End Sub
-    Private Sub paymentHandler()
+    Private Function paymentHandler() As Boolean
         If (book.Price > 0) Then
-            InputBox("Enter your CVV")
+            Dim a = InputBox("Enter your CVV")
+            If (a.Length() <> 3 Or Not Regex.IsMatch(a, "^[0-9 ]+$")) Then
+                MsgBox("CVV Should be 3 digits.")
+                Return False
+            End If
             PaymentScreen.ShowDialog()
         End If
-    End Sub
+        Return True
+    End Function
 
 
 
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        paymentHandler()
-        book.buy(Globals.CurrentUser.ID)
-
+        If paymentHandler() Then
+            book.buy(Globals.CurrentUser.ID)
+        End If
     End Sub
 
 
